@@ -3,6 +3,8 @@
 Created on Tue Apr 11 17:48:02 2023
 
 @author: tdeku
+
+This is inspired and much of the code is taken from PyQuant News - a newsletter/learniing platform for quant finance.
 """
 
 from sys import argv
