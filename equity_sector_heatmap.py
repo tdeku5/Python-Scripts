@@ -18,6 +18,7 @@ con = sqlite3.connect("financial_data2.db")
 
 # Create pandas dataframes with the data
 # Stocks
+# 2018-07-01 is the first date with available data for all ETFs
 df_SPY = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='SPY' and date>='2018-07-01'", con)
 df_XLI = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='XLI' and date>='2018-07-01'", con)
 df_XLE = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='XLE' and date>='2018-07-01'", con)
