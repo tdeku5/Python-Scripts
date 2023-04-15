@@ -4,7 +4,7 @@ Created on Tue Apr 11 19:14:00 2023
 
 @author: tdeku
 
-This script queries equity sector ETF data from the SQL database created in yfinance and creates a 
+This script queries equity sector ETF data from the SQL database created in yfinance_scraper and creates a 
 return correlation heatmap.
 """
 import sqlite3
