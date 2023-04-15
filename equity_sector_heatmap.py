@@ -3,6 +3,9 @@
 Created on Tue Apr 11 19:14:00 2023
 
 @author: tdeku
+
+This script queries data from the SQL database created with yfinance_scraper.py, and then creates a 
+correlation heatmap for the returns of the US equity market sector ETFs.
 """
 import sqlite3
 import pandas as pd
@@ -27,6 +30,7 @@ df_XLB = pd.read_sql_query("SELECT date, close from financial_data2 where symbol
 df_XLC = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='XLC' and date>='2018-07-01'", con)
 df_XHB = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='XHB' and date>='2018-07-01'", con)
 
+'''
 # Commodities
 df_DBC = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='DBC' and date>='2018-07-01'", con)
 df_USO = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='USO' and date>='2018-07-01'", con)
@@ -57,7 +61,7 @@ df_FXB = pd.read_sql_query("SELECT date, close from financial_data2 where symbol
 df_FXY = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='FXY' and date>='2018-07-01'", con)
 df_FXA = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='FXA' and date>='2018-07-01'", con)
 df_BIL = pd.read_sql_query("SELECT date, close from financial_data2 where symbol='BIL' and date>='2018-07-01'", con)
-
+'''
 
 # Get returns
 spy_returns = np.log(df_SPY['close']).diff()
